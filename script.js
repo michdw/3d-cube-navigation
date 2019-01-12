@@ -18,10 +18,10 @@ $(document).ready(function() {
   $('.homeicon').hide();
   // center inset becomes visible
   $('.centerInset').css('background', $('.centerFace').data('bg'));
-  $('.colorSquare:nth-of-type(1)').css('background', $('.topFace').data('bg'));
-  $('.colorSquare:nth-of-type(2)').css('background', $('.leftFace').data('bg'));
-  $('.colorSquare:nth-of-type(3)').css('background', $('.rightFace').data('bg'));
-  $('.colorSquare:nth-of-type(4)').css('background', $('.bottomFace').data('bg'));
+  $('.centerSquare:nth-of-type(1)').css('background', $('.topFace').data('bg'));
+  $('.centerSquare:nth-of-type(2)').css('background', $('.leftFace').data('bg'));
+  $('.centerSquare:nth-of-type(3)').css('background', $('.rightFace').data('bg'));
+  $('.centerSquare:nth-of-type(4)').css('background', $('.bottomFace').data('bg'));
   $('.centerInset').fadeIn();
 
   $('.toHome').hover(function() {
@@ -56,7 +56,7 @@ $(document).ready(function() {
   //move cube on click
   var navFadeIn = function(thisNav) {
     $('.home, .nav').not(thisNav).delay(400).fadeIn(700);
-  }
+  };
 
   $('.navTop').click(function() {
     rotateCube(0, -90, $('.topInset'), $('.topFace'));

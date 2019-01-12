@@ -241,14 +241,6 @@ body {
   margin: .5em;
 }
 
-.intro {
-  position: absolute;
-  font-size: 10vh;
-  right: 5%;
-  top: 40%;
-  opacity: .7;
-}
-
 .content {
   position: absolute;
   text-align: right;
@@ -258,7 +250,16 @@ body {
   line-height: 1.5em;
 }
 
-.colorSquare {
+/* particular to center (home) inset */
+.centerIntro {
+  position: absolute;
+  font-size: 10vh;
+  right: 5%;
+  top: 40%;
+  opacity: .7;
+}
+
+.centerSquare {
   float: left;
   margin: 0;
   padding: 0;
