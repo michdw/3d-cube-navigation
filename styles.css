@@ -58,18 +58,10 @@ body {
   bottom: 0;
 }
 
-.home {
-  z-index: 99;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-}
-
 .headline {
   position: absolute;
   bottom: 2em;
   margin-left: -1em;
-  left: 20px;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -174,22 +166,22 @@ body {
   opacity: 1;
 }
 
-.navTop {
+.toTop {
   -webkit-transform: translateY(-45vh);
   transform: translateY(-45vh);
 }
 
-.navLeft {
+.toLeft {
   -webkit-transform: translateX(-45vh);
   transform: translateX(-45vh);
 }
 
-.navRight {
+.toRight {
   -webkit-transform: translateX(45vh);
   transform: translateX(45vh);
 }
 
-.navBottom {
+.toBottom {
   -webkit-transform: translateY(45vh);
   transform: translateY(45vh);
 }

@@ -1,14 +1,14 @@
 var cube = $('.cube');
 
-function rotateCube(horiz, vert, newInset, newFace) {
+function rotateCube(horiz, vert, newInset, newSide) {
   // hide features on originally visible side of cube
   $('.nav, .insets>div').hide();
   // rotate cube a certain way on x and y axis
   cube.css('transform', 'rotateY(' + horiz + 'deg) rotateX(' + vert + 'deg)')
     .css('-webkit-transform', 'rotateY(' + horiz + 'deg) rotateX(' + vert + 'deg)');
   // change color of features to correspond with new side
-  $('.nav').css('color', newFace.data('color'));
-  newInset.css('background', newFace.data('bg'));
+  $('.nav').css('color', newSide.data('color'));
+  newInset.css('background', newSide.data('bg'));
   // make features visible- nav buttons fade in further below
   newInset.delay(400).fadeIn(700);
 }
@@ -26,28 +26,28 @@ $(document).ready(function() {
 
   $('.toHome').hover(function() {
     $(this).css('cursor', 'pointer');
-    $('.home').css('text-shadow', '0 0 20px #fff');
+    $('.homeicon').css('text-shadow', '0 0 20px #fff');
   }, function() {
-    $('.home').css('text-shadow', 'none');
+    $('.homeicon').css('text-shadow', 'none');
   });
 
   // move inset when hovering over nav buttons
-  $('.navTop').hover(function() {
+  $('.toTop').hover(function() {
     $('.insets').css('transform', ' rotateX(-16deg)');
   }, function() {
     $('.insets').css('transform', 'rotateX(0)');
   });
-  $('.navLeft').hover(function() {
+  $('.toLeft').hover(function() {
     $('.insets').css('transform', ' rotateY(16deg)');
   }, function() {
     $('.insets').css('transform', 'rotateY(0)');
   });
-  $('.navRight').hover(function() {
+  $('.toRight').hover(function() {
     $('.insets').css('transform', ' rotateY(-16deg)');
   }, function() {
     $('.insets').css('transform', 'rotateY(0)');
   });
-  $('.navBottom').hover(function() {
+  $('.toBottom').hover(function() {
     $('.insets').css('transform', ' rotateX(16deg)');
   }, function() {
     $('.insets').css('transform', 'rotateX(0)');
@@ -55,28 +55,29 @@ $(document).ready(function() {
 
   //move cube on click
   var navFadeIn = function(thisNav) {
-    $('.home, .nav').not(thisNav).delay(400).fadeIn(700);
+    $('.nav').not(thisNav).delay(400).fadeIn(700);
+    $('.homeicon').fadeIn();
   };
 
-  $('.navTop').click(function() {
+  $('.toTop').click(function() {
     rotateCube(0, -90, $('.topInset'), $('.topFace'));
     navFadeIn(this);
    });
-  $('.navLeft').click(function() {
+  $('.toLeft').click(function() {
     rotateCube(90, 0, $('.leftInset'), $('.leftFace'));
     navFadeIn(this);
    });
-  $('.navRight').click(function() {
+  $('.toRight').click(function() {
     rotateCube(-90, 0, $('.rightInset'), $('.rightFace'));
     navFadeIn(this);
    });
-  $('.navBottom').click(function() {
+  $('.toBottom').click(function() {
     rotateCube(0, 90, $('.bottomInset'), $('.bottomFace'));
     navFadeIn(this);
    });
   $('.toHome, .insets>div').click(function() {
     rotateCube(0, 0, $('.centerInset'), $('.centerFace'));
-    $('.home').fadeOut();
+    $('.homeicon').fadeOut();
     $('.nav').delay(400).fadeIn(700);
   });
 
