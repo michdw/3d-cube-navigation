@@ -5,13 +5,18 @@ function rotateCube(horiz, vert, newInset, newSide) {
   $('.nav, .insets>div').hide();
   // rotate cube a certain way on x and y axis
   cube.css('transform', 'rotateY(' + horiz + 'deg) rotateX(' + vert + 'deg)')
-    .css('-webkit-transform', 'rotateY(' + horiz + 'deg) rotateX(' + vert + 'deg)');
+  .css('-webkit-transform', 'rotateY(' + horiz + 'deg) rotateX(' + vert + 'deg)');
   // change color of features to correspond with new side
   $('.nav').css('color', newSide.data('color'));
   newInset.css('background', newSide.data('bg'));
   // make features visible- nav buttons fade in further below
   newInset.delay(400).fadeIn(700);
 }
+
+var navFadeIn = function(thisNav) {
+  $('.nav').not(thisNav).delay(400).fadeIn(700);
+  $('.homeicon').fadeIn();
+};
 
 $(document).ready(function() {
   $('.preload').fadeOut();
@@ -52,13 +57,8 @@ $(document).ready(function() {
   }, function() {
     $('.insets').css('transform', 'rotateX(0)');
   });
-
+  
   //move cube on click
-  var navFadeIn = function(thisNav) {
-    $('.nav').not(thisNav).delay(400).fadeIn(700);
-    $('.homeicon').fadeIn();
-  };
-
   $('.toTop').click(function() {
     rotateCube(0, -90, $('.topInset'), $('.topFace'));
     navFadeIn(this);
@@ -69,8 +69,9 @@ $(document).ready(function() {
    });
   $('.toRight').click(function() {
     rotateCube(-90, 0, $('.rightInset'), $('.rightFace'));
+    rotateCube(-90, 0, $('.rightInset'), $('.rightFace'));
     navFadeIn(this);
-   });
+  });
   $('.toBottom').click(function() {
     rotateCube(0, 90, $('.bottomInset'), $('.bottomFace'));
     navFadeIn(this);
