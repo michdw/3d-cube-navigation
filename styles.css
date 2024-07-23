@@ -45,6 +45,14 @@ body {
   user-select: none;
 }
 
+.introText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  color: #fff;
+}
+
 .icons {
   font-family: icons;
   -webkit-transition: color 1.5s;
@@ -55,7 +63,7 @@ body {
   position: absolute;
   font-size: 3em;
   left: 2vw;
-  bottom: 0;
+  bottom: 2vw;
 }
 
 .headline {
@@ -166,22 +174,22 @@ body {
   opacity: 1;
 }
 
-.toTop {
+.topIcon {
   -webkit-transform: translateY(-45vh);
   transform: translateY(-45vh);
 }
 
-.toLeft {
+.leftIcon {
   -webkit-transform: translateX(-45vh);
   transform: translateX(-45vh);
 }
 
-.toRight {
+.rightIcon {
   -webkit-transform: translateX(45vh);
   transform: translateX(45vh);
 }
 
-.toBottom {
+.bottomIcon {
   -webkit-transform: translateY(45vh);
   transform: translateY(45vh);
 }
@@ -241,7 +249,9 @@ body {
 /* particular to center (home) inset */
 .centerIntro {
   position: absolute;
-  font-size: 10vh;
+  display: flex;
+  align-items: end;
+  font-size: 7vh;
   right: 5%;
   top: 40%;
   opacity: .7;

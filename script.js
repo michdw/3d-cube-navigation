@@ -19,6 +19,7 @@ var navFadeIn = function (thisNav) {
 
 $(document).ready(function () {
   $(".preload").fadeOut();
+
   $(".homeicon").hide();
   // center inset becomes visible
   $(".centerInset").css("background", $(".centerFace").data("bg"));
@@ -37,6 +38,10 @@ $(document).ready(function () {
   );
   $(".centerInset").fadeIn();
 
+  $(".icons").click(function() {
+    $(".introText").fadeOut(100);
+  })
+
   $(".toHome").hover(
     function () {
       $(this).css("cursor", "pointer");
@@ -47,8 +52,8 @@ $(document).ready(function () {
     }
   );
 
-  // insets + cube rotation on hover
-  $(".toTop").hover(
+  // rotation on nav hover
+  $(".topIcon").hover(
     function () {
       $(".insets").css("transform", " rotateX(-20deg)");
       cube.css("transform", "rotateX(-20deg)");
@@ -58,7 +63,7 @@ $(document).ready(function () {
       $(".insets").css("transform", "rotateX(0)");
     }
   );
-  $(".toLeft").hover(
+  $(".leftIcon").hover(
     function () {
       $(".insets").css("transform", " rotateY(20deg)");
       cube.css("transform", "rotateY(20deg)");
@@ -68,7 +73,7 @@ $(document).ready(function () {
       $(".insets").css("transform", "rotateY(0)");
     }
   );
-  $(".toBottom").hover(
+  $(".bottomIcon").hover(
     function () {
       $(".insets").css("transform", " rotateX(20deg)");
       cube.css("transform", "rotateX(20deg)");
@@ -78,7 +83,7 @@ $(document).ready(function () {
       $(".insets").css("transform", "rotateX(0)");
     }
   );
-  $(".toRight").hover(
+  $(".rightIcon").hover(
     function () {
       $(".insets").css("transform", " rotateY(-20deg)");
       cube.css("transform", "rotateY(-20deg)");
@@ -90,19 +95,19 @@ $(document).ready(function () {
   );
 
   //move cube on icon click
-  $(".toTop, .topFace").click(function () {
-    rotateCube(0, -90, $(".leftInset"), $(".leftFace"));
+  $(".topIcon, .topFace").click(function () {
+    rotateCube(0, -90, $(".topInset"), $(".topFace"));
     navFadeIn(this);
   });
-  $(".toLeft, .leftFace").click(function () {
+  $(".leftIcon, .leftFace").click(function () {
     rotateCube(90, 0, $(".leftInset"), $(".leftFace"));
     navFadeIn(this);
   });
-  $(".toRight, .rightFace").click(function () {
+  $(".rightIcon, .rightFace").click(function () {
     rotateCube(-90, 0, $(".rightInset"), $(".rightFace"));
     navFadeIn(this);
   });
-  $(".toBottom, .bottomFace").click(function () {
+  $(".bottomIcon, .bottomFace").click(function () {
     rotateCube(0, 90, $(".bottomInset"), $(".bottomFace"));
     navFadeIn(this);
   });
