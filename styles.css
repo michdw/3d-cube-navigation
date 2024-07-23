@@ -224,10 +224,6 @@ body {
   transform: translateZ(45vh);
 }
 
-.insets>div:hover {
-  cursor: pointer;
-}
-
 .header {
   font-size: 2em;
   margin: .5em;

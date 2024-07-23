@@ -1,114 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>3D Cube Navigation</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="quad.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Play"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>3D Cube Navigation</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-  <link href="styles.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-</head>
+  <body>
+    <div class="frame">
+      <!-- preloaded images for seamless display -->
+      <div class="preload">
+        <img src="img/canyon.png" alt="" />
+        <img src="img/leaves.png" alt="" />
+        <img src="img/rocks.png" alt="" />
+        <img src="img/wheat.png" alt="" />
+      </div>
 
-<body>
-  <div class="frame">
+      <!-- bottom left of screen -->
+      <div class="toHome">
+        <p class="headline">aaoijne</p>
+        <div class="homeicon icons">e</div>
+      </div>
 
-    <!-- preloaded images for seamless display -->
-    <div class="preload">
-      <img src="img/canyon.png" alt="">
-      <img src="img/leaves.png" alt="">
-      <img src="img/rocks.png" alt="">
-      <img src="img/wheat.png" alt="">
-    </div>
-
-    <!-- bottom left of screen -->
-    <div class="toHome">
-      <p class="headline">aaoijne</p>
-      <div class="homeicon icons">e</div>
-    </div>
-
-    <!-- cube with images -->
-    <div class="cubeHolder">
-      <div class="cube">
-        <div class="topFace" data-color="rgb(106, 116, 205)" data-bg="rgba(106, 116, 205, .4)">
-          <img src="img/rocks.png" alt="">
-        </div>
-        <div class="leftFace" data-color="rgb(191, 143, 61)" data-bg="rgba(191, 143, 61, .4)">
-          <img src="img/wheat.png" alt="">
-        </div>
-        <div class="centerFace" data-color="#fff" data-bg="rgba(187, 187, 187, .4)">
-          <img src="img/peak.png" alt="">
-        </div>
-        <div class="rightFace" data-color="rgb(134, 190, 50)" data-bg="rgba(134, 190, 50, .4)">
-          <img src="img/leaves.png" alt="">
-        </div>
-        <div class="bottomFace" data-color="rgb(189, 66, 33)" data-bg="rgba(189, 66, 33, .4)">
-          <img src="img/canyon.png" alt="">
+      <!-- cube with images -->
+      <div class="cubeHolder">
+        <div class="cube">
+          <div
+            class="topFace"
+            data-color="rgb(106, 116, 205)"
+            data-bg="rgba(106, 116, 205, .4)"
+          >
+            <img src="img/rocks.png" alt="" />
+          </div>
+          <div
+            class="leftFace"
+            data-color="rgb(191, 143, 61)"
+            data-bg="rgba(191, 143, 61, .4)"
+          >
+            <img src="img/wheat.png" alt="" />
+          </div>
+          <div
+            class="centerFace"
+            data-color="#fff"
+            data-bg="rgba(187, 187, 187, .4)"
+          >
+            <img src="img/peak.png" alt="" />
+          </div>
+          <div
+            class="rightFace"
+            data-color="rgb(134, 190, 50)"
+            data-bg="rgba(134, 190, 50, .4)"
+          >
+            <img src="img/leaves.png" alt="" />
+          </div>
+          <div
+            class="bottomFace"
+            data-color="rgb(189, 66, 33)"
+            data-bg="rgba(189, 66, 33, .4)"
+          >
+            <img src="img/canyon.png" alt="" />
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- insets for each side of cube -->
-    <div class="insetHolder">
-      <div class="insets">
-        <div class="topInset">
-          <p class="header">soigjep</p>
-          <p class="content">
-            Sala on joku alas se. Pianaikaa on en puuskahti menemista. Herra ja huone ai sinne sanoi milla. Ryhtya
-            yhteen teidan kas vasten tuo sai yha. Kohdallani liikkeella kirmaissut pirullisen ansioitaan miinavenhe ai
-            on ja. Sita tama puna on pain jakone olen
-            et.
-          </p>
-        </div>
-        <div class="leftInset">
-          <p class="header">agljelk</p>
-          <p class="content">
-            En te etko ne sata niin aani anna ilta. Me pisti osata ja te on annat. Tuo nae mika enaa aiti mina tyly
-            ensi tai. Tai vai sentaan muutkin viisiin jaa voi. Vasten sisaan hirret kun litraa kas. Millainen ajelehtii
-            oli jatkaessa rusinoita kappaleen han sen
-            hymahtaen.
-          </p>
-        </div>
-        <div class="centerInset">
-          <div class="centerSquare"></div>
-          <div class="centerSquare"></div>
-          <div class="centerSquare"></div>
-          <div class="centerSquare"></div>
-          <p class="centerIntro">poirvje</p>
-        </div>
-        <div class="rightInset">
-          <p class="header">avinpoi</p>
-          <p class="content">
-            Olin eiko nae saa enaa tupa kuin lie. Tai jata osa tee puhe ole muut. Valmiiksi kukkasmaa kulettaja
-            hymahtaen koetakaan han oli voi lie kastettua. Tuo tai oli jos enko naki yhta ihan ajat. Se kuvitella
-            kunnialla kulettaja ai jalkaansa. Ehka olet ajoi
-            ole lie sita muut ukki.
-          </p>
-        </div>
-        <div class="bottomInset">
-          <p class="header">caoiapim</p>
-          <p class="content">
-            Ja ne vailla me meilta ai useita. Huudahti ne ai ne vaylalta syotavaa loydetty helmassa tahtoisi. Paikata
-            tai vastasi tavalla lie. Se jalat ne menen hokee malja pohja. Oletteko kun metsassa sen nostivat toi han.
-            Kuin lapi olen sina aave en siis on. Suurtakaan
-            luulikohan hartioilla kaupunkien ai ei te en.
-          </p>
+      <!-- insets for each side of cube -->
+      <div class="insetHolder">
+        <div class="insets">
+          <div class="topInset">
+            <p class="header">soigjep</p>
+            <p class="content">
+              Sala on joku alas se. Pianaikaa on en puuskahti menemista. Herra
+              ja huone ai sinne sanoi milla. Ryhtya yhteen teidan kas vasten tuo
+              sai yha. Kohdallani liikkeella kirmaissut pirullisen ansioitaan
+              miinavenhe ai on ja. Sita tama puna on pain jakone olen et.
+            </p>
+          </div>
+          <div class="leftInset">
+            <p class="header">agljelk</p>
+            <p class="content">
+              En te etko ne sata niin aani anna ilta. Me pisti osata ja te on
+              annat. Tuo nae mika enaa aiti mina tyly ensi tai. Tai vai sentaan
+              muutkin viisiin jaa voi. Vasten sisaan hirret kun litraa kas.
+              Millainen ajelehtii oli jatkaessa rusinoita kappaleen han sen
+              hymahtaen.
+            </p>
+          </div>
+          <div class="centerInset">
+            <div class="centerSquare"></div>
+            <div class="centerSquare"></div>
+            <div class="centerSquare"></div>
+            <div class="centerSquare"></div>
+            <p class="centerIntro">poirvje</p>
+          </div>
+          <div class="rightInset">
+            <p class="header">avinpoi</p>
+            <p class="content">
+              Olin eiko nae saa enaa tupa kuin lie. Tai jata osa tee puhe ole
+              muut. Valmiiksi kukkasmaa kulettaja hymahtaen koetakaan han oli
+              voi lie kastettua. Tuo tai oli jos enko naki yhta ihan ajat. Se
+              kuvitella kunnialla kulettaja ai jalkaansa. Ehka olet ajoi ole lie
+              sita muut ukki.
+            </p>
+          </div>
+          <div class="bottomInset">
+            <p class="header">caoiapim</p>
+            <p class="content">
+              Ja ne vailla me meilta ai useita. Huudahti ne ai ne vaylalta
+              syotavaa loydetty helmassa tahtoisi. Paikata tai vastasi tavalla
+              lie. Se jalat ne menen hokee malja pohja. Oletteko kun metsassa
+              sen nostivat toi han. Kuin lapi olen sina aave en siis on.
+              Suurtakaan luulikohan hartioilla kaupunkien ai ei te en.
+            </p>
+          </div>
         </div>
       </div>
+
+      <!-- icons for navigating to different sides of cube -->
+      <div class="icons nav toTop">q</div>
+      <div class="icons nav toLeft">w</div>
+      <div class="icons nav toRight">r</div>
+      <div class="icons nav toBottom">t</div>
     </div>
 
-    <!-- icons for navigating to different sides of cube -->
-    <div class="icons nav toTop">q</div>
-    <div class="icons nav toLeft">w</div>
-    <div class="icons nav toRight">r</div>
-    <div class="icons nav toBottom">t</div>
-
-  </div>
-
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="jquery.js"></script> -->
-  <script type="text/javascript" src="script.js"></script>
-
-</body>
-
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery.min.js"
+    ></script>
+    <!-- <script type="text/javascript" src="jquery.js"></script> -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
