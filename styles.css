@@ -45,14 +45,6 @@ body {
   user-select: none;
 }
 
-.introText {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1em;
-  color: #fff;
-}
-
 .icons {
   font-family: icons;
   -webkit-transition: color 1.5s;
@@ -249,12 +241,18 @@ body {
 /* particular to center (home) inset */
 .centerIntro {
   position: absolute;
-  display: flex;
-  align-items: end;
   font-size: 7vh;
   right: 5%;
   top: 40%;
   opacity: .7;
+}
+
+.instructions {
+  position: absolute;
+  left: 5%;
+  top: 35%;
+  opacity: .7;
+  color: #000;
 }
 
 .centerSquare {

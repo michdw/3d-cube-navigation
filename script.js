@@ -20,6 +20,16 @@ var navFadeIn = function (thisNav) {
 $(document).ready(function () {
   $(".preload").fadeOut();
 
+
+  setTimeout(function () {
+    $(".leftIcon").css("opacity", "1");
+    cube.css("transform", "rotateY(20deg)");
+  }, 100);
+  setTimeout(function () {
+    $(".leftIcon").css("opacity", ".8");
+    cube.css("transform", "rotateY(10deg)");
+  }, 500);
+
   $(".homeicon").hide();
   // center inset becomes visible
   $(".centerInset").css("background", $(".centerFace").data("bg"));
@@ -38,7 +48,7 @@ $(document).ready(function () {
   );
   $(".centerInset").fadeIn();
 
-  $(".icons").click(function() {
+  $(".icons").click(function () {
     $(".introText").fadeOut(100);
   })
 
